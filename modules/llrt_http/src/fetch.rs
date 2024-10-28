@@ -23,7 +23,7 @@ use super::{
 
 const MAX_REDIRECT_COUNT: u32 = 20;
 
-pub(crate) fn init(ctx: &Ctx<'_>, globals: &Object) -> Result<()> {
+pub fn init(ctx: &Ctx<'_>, globals: &Object) -> Result<()> {
     //init eagerly
     let client = HTTP_CLIENT.as_ref().or_throw(ctx)?;
 
